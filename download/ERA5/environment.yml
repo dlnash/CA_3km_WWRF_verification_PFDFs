@@ -1,0 +1,11 @@
+name: cds
+channels:
+  - conda-forge
+  - defaults  
+dependencies:
+  - python=3.8
+  - pip
+  - pyyaml
+  - awscli
+  - pip:
+    - cdsapi>=0.7.4

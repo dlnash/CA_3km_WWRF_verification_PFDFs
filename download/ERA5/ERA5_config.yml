@@ -1,0 +1,76 @@
+# Filename:    ERA5_config.yml
+# Author:      Deanna Nash, dnash@ucsd.edu
+# Description: Dictionary of different download variables/options for ERA5
+# for use in conjunction with getERA5_batch.py and download_ERA5.sh
+
+---
+ivt: 
+    data_type: 'reanalysis-era5-single-levels'
+    levels: 
+    var_name: ['vertical_integral_of_northward_water_vapour_flux', 'vertical_integral_of_eastward_water_vapour_flux']
+    start_yr: 2021
+    end_yr: 2025
+    month: ['01','02','03','04','05','06','07','08','09','10','11','12']
+    day: ['01','02','03','04','05','06', '07','08','09','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31']
+    time: ['00:00','06:00','12:00','18:00']
+    area: [60, -170., 10., -70.] # [N,W,S,E] Default: global
+    grid: [0.25, 0.25]
+    datadir: '/cw3e/mead/projects/cwp162/data/downloads/ERA5_sfc/ivt/6hr/'
+    fprefix: 'era5_namerica_025dg_6hr_ivt'
+
+iwv: 
+    data_type: 'reanalysis-era5-single-levels'
+    levels: 
+    var_name: ['total_column_water_vapour']
+    start_yr: 2021
+    end_yr: 2025
+    month: ['01','02','03','04','05','06','07','08','09','10','11','12']
+    day: ['01','02','03','04','05','06', '07','08','09','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31']
+    time: ['00:00','06:00','12:00','18:00']
+    area: [60, -170., 10., -70.] # [N,W,S,E] Default: global
+    grid: [0.25, 0.25]
+    datadir: '/cw3e/mead/projects/cwp162/data/downloads/ERA5_sfc/iwv/6hr/'
+    fprefix: 'era5_namerica_025dg_6hr_iwv'
+
+mslp: 
+    data_type: 'reanalysis-era5-single-levels'
+    levels: 
+    var_name: ['mean_sea_level_pressure']
+    start_yr: 2021
+    end_yr: 2025
+    month: ['01','02','03','04','05','06','07','08','09','10','11','12']
+    day: ['01','02','03','04','05','06', '07','08','09','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31']
+    time: ['00:00','06:00','12:00','18:00']
+    area: [60, -170., 10., -70.] # [N,W,S,E] Default: global
+    grid: [0.25, 0.25]
+    datadir: '/cw3e/mead/projects/cwp162/data/downloads/ERA5_sfc/mslp/6hr/'
+    fprefix: 'era5_namerica_025dg_6hr_mslp'
+    
+prs_z:
+    data_type: 'reanalysis-era5-pressure-levels'
+    levels: ['500']
+    var_name: ['geopotential']
+    start_yr: 2021
+    end_yr: 2025
+    month: ['01','02','03','04','05','06','07','08','09','10','11','12']
+    day: ['01','02','03','04','05','06', '07','08','09','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31']
+    time: ['00:00','06:00','12:00','18:00']
+    area: [60, -170., 10., -70.] # [N,W,S,E] Default: global
+    grid: [0.25, 0.25]
+    datadir: '/cw3e/mead/projects/cwp162/data/downloads/ERA5_sfc/500z/6hr/'
+    fprefix: 'era5_namerica_025dg_6hr_500z'
+
+prs_uv:
+    data_type: 'reanalysis-era5-pressure-levels'
+    levels: ['925']
+    var_name: ['u_component_of_wind', 'v_component_of_wind']
+    start_yr: 2021
+    end_yr: 2025
+    month: ['01','02','03','04','05','06','07','08','09','10','11','12']
+    day: ['01','02','03','04','05','06', '07','08','09','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31']
+    time: ['00:00','06:00','12:00','18:00']
+    area: [60, -170., 10., -70.] # [N,W,S,E] Default: global
+    grid: [0.25, 0.25]
+    datadir: '/cw3e/mead/projects/cwp162/data/downloads/ERA5_sfc/925uv/6hr/'
+    fprefix: 'era5_namerica_025dg_6hr_925uv'
+...
