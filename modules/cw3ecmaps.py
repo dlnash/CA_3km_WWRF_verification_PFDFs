@@ -55,6 +55,17 @@ cw3e_cmaps =    {
                         "ticks":[20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60],
                         "label": "IWV (mm)"
                         },
+
+            "arscale" : {
+                        "colors":[[10, 193, 255], # blue
+                            [4, 255, 3], # green
+                            [255, 255, 3], # yellow
+                            [255, 166, 2], # orange
+                            [255, 1, 0]], # red
+                        "bounds":[1, 2, 3, 4, 5],
+                        "ticks":[1, 2, 3, 4, 5],
+                        "label": "AR Scale",
+            }
 }
 
 def cmap(cbarname):
